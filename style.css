@@ -1,0 +1,151 @@
+body{
+    background:#e9dcdc;
+    text-align:center;
+    font-family:Arial, sans-serif;
+}
+
+.arbol{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px auto;
+}
+
+.tronco{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* CORAZONES */
+.corazon{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #ff4da6;
+    transform: rotate(-45deg);
+    opacity: 0;
+    z-index: 2;
+ 
+    margin-top: -10px;
+
+    animation: aparecer 0.5s ease forwards,
+               latido 1s ease-in-out infinite;
+}
+
+.corazon::before,
+.corazon::after{
+    content:"";
+    position:absolute;
+    width:14px;
+    height:14px;
+    background:#ff4da6;
+    border-radius:50%;
+}
+
+.corazon::before{
+    top:-7px;
+    left:0;
+}
+
+.corazon::after{
+    left:7px;
+    top:0;
+}
+
+/* PARTE SUPERIOR */
+.c1{ top:45px; left:100px; }
+.c2{ top:45px; left:170px; }
+.c3{ top:55px; left:70px; }
+.c4{ top:55px; left:200px; }
+
+/* SEGUNDA FILA */
+.c5{ top:80px; left:60px; }
+.c6{ top:80px; left:120px; }
+.c7{ top:80px; left:180px; }
+.c8{ top:80px; left:220px; }
+
+/* TERCERA FILA (alejados del tronco) */
+.c9{ top:110px; left:55px; }
+.c10{ top:110px; left:90px; }
+.c11{ top:110px; left:195px; }
+.c12{ top:110px; left:230px; }
+.c13{ top:120px; left:150px; } /* movido fuera del centro */
+
+/* CUARTA FILA */
+.c14{ top:140px; left:60px; }
+.c15{ top:140px; left:100px; }
+.c16{ top:140px; left:190px; }
+.c17{ top:140px; left:230px; }
+
+/* PARTE BAJA (solo ramas laterales) */
+.c18{ top:170px; left:70px; }
+.c19{ top:170px; left:110px; }
+.c20{ top:170px; left:180px; }
+.c21{ top:170px; left:220px; }
+
+/* EXTREMOS */
+.c22{ top:95px; left:35px; }
+.c23{ top:95px; left:250px; }
+.c24{ top:130px; left:40px; }
+.c25{ top:130px; left:250px; }
+.c26{ top:160px; left:50px; }
+.c27{ top:160px; left:240px; }
+
+/* ÚLTIMO CORAZÓN EN RAMA CENTRAL ALTA */
+.c28{ top:70px; left:140px; }
+
+/* DELAY UNO POR UNO */
+.c1{ animation-delay:0s; }
+.c2{ animation-delay:0.2s; }
+.c3{ animation-delay:0.4s; }
+.c4{ animation-delay:0.6s; }
+.c5{ animation-delay:0.8s; }
+.c6{ animation-delay:1s; }
+.c7{ animation-delay:1.2s; }
+.c8{ animation-delay:1.4s; }
+.c9{ animation-delay:1.6s; }
+.c10{ animation-delay:1.8s; }
+.c11{ animation-delay:2s; }
+.c12{ animation-delay:2.2s; }
+.c13{ animation-delay:2.4s; }
+.c14{ animation-delay:2.6s; }
+.c15{ animation-delay:2.8s; }
+.c16{ animation-delay:3s; }
+.c17{ animation-delay:3.2s; }
+.c18{ animation-delay:3.4s; }
+.c19{ animation-delay:3.6s; }
+.c20{ animation-delay:3.8s; }
+.c21{ animation-delay:4s; }
+.c22{ animation-delay:4.2s; }
+.c23{ animation-delay:4.4s; }
+.c24{ animation-delay:4.6s; }
+.c25{ animation-delay:4.8s; }
+.c26{ animation-delay:5s; }
+.c27{ animation-delay:5.2s; }
+.c28{ animation-delay:5.4s; }
+
+/* ANIMACIONES */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:rotate(-45deg) scale(0.5);
+    }
+    to{
+        opacity:1;
+        transform:rotate(-45deg) scale(1);
+    }
+}
+
+@keyframes latido{
+    0%{ transform:rotate(-45deg) scale(1); }
+    50%{ transform:rotate(-45deg) scale(1.15); }
+    100%{ transform:rotate(-45deg) scale(1); }
+}
+
+.contador{
+    margin-top:40px;
+    font-size:20px;
+}
