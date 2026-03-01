@@ -63,17 +63,6 @@
 </audio>
 
 <script>
-window.onload = function() {
-  let musica = document.getElementById("musica");
-  let tiempoGuardado = localStorage.getItem("tiempoMusica");
-
-  if(tiempoGuardado){
-    musica.currentTime = tiempoGuardado;
-  }
-
-  musica.play();
-}
-</script>
 <audio id="musica" autoplay loop>
   <source src="musica.mp3" type="audio/mp3">
 </audio>
