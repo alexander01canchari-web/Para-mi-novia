@@ -57,14 +57,19 @@
 <div class="corazon c28"></div>
 </div>
  <p id="contador"></p>
-  <script src="script.js"></script>
-  <audio id="musica" loop autoplay>
+  <button onclick="reproducir()">Tocar música 💗</button>
+
+<audio id="musica" loop>
   <source src="musica.mp3" type="audio/mp3">
 </audio>
 
+<script src="script.js"></script>
+
 <script>
-<audio id="musica" autoplay loop>
-  <source src="musica.mp3" type="audio/mp3">
-</audio>
+function reproducir() {
+  const musica = document.getElementById("musica");
+  musica.play();
+}
+</script>
 </body>
 </html>
